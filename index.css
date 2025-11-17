@@ -1348,10 +1348,6 @@ ul.mr-auto li span {
   position: relative;
 }
 
-.qomSingle.loading {
-  /* hide real content but keep layout */
-  visibility: hidden;
-}
 .qomSingle.loading * {
   opacity: 0; /* makes everything invisible WITHOUT shifting layout */
 }
