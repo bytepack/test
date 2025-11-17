@@ -1323,6 +1323,7 @@ ul.mr-auto li span {
 }
 
 .qomticket.loading {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
