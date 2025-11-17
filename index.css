@@ -1321,12 +1321,12 @@ ul.mr-auto li span {
 }
 
 .qomticket.loading {
-  display: flex;
+  /* display: flex; */
   visibility: hidden;
 }
 
 .qomticket.loading .qomSingle {
-  /* flex-shrink: 0; */
+  flex-shrink: 0;
 }
 
 .qomSingle {
