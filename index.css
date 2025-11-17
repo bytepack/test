@@ -1019,6 +1019,7 @@ ul.mr-auto li span {
   border-radius: 5px;
 }
 .qomticket {
+  visibility: hidden;
   font-weight: 400;
   padding: 0 5px 4px;
 }
@@ -1317,6 +1318,7 @@ ul.mr-auto li span {
 }
 
 .qomticket {
+  visibility: hidden;
   height: 290px;
 }
 
