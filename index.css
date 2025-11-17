@@ -1374,7 +1374,7 @@ h3,
 /* --------------------------- */
 /* IMAGE skeleton (180px tall) */
 /* --------------------------- */
-.qomticket.loading .qomImg::before {
+.qomticket.loading .qomSingle .qomImg::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -1388,7 +1388,7 @@ h3,
 /* --------------------------- */
 /* TITLE skeleton              */
 /* --------------------------- */
-.qomticket.loading h3::before {
+.qomticket.loading .qomSingle h3::before {
   content: "";
   position: absolute;
   right: 0;
@@ -1404,7 +1404,7 @@ h3,
 /* --------------------------- */
 /* PLACE skeleton              */
 /* --------------------------- */
-.qomticket.loading .place::before {
+.qomticket.loading .qomSingle .place::before {
   content: "";
   position: absolute;
   right: 0;
@@ -1420,7 +1420,7 @@ h3,
 /* --------------------------- */
 /* BUTTON skeleton             */
 /* --------------------------- */
-.qomticket.loading .buyBtn::before {
+.qomticket.loading .qomSingle .buyBtn::before {
   content: "";
   position: absolute;
   right: 0;
