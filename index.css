@@ -1322,6 +1322,10 @@ ul.mr-auto li span {
   height: 290px;
 }
 
+.qomticket.loading {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .qomSingle {
   height: 100%;
 }
@@ -1336,11 +1340,6 @@ ul.mr-auto li span {
   100% {
     background-color: #eee;
   }
-}
-
-/* hide real content but preserve layout */
-.qomSingle.loading * {
-  /* opacity: 0; */
 }
 
 /* make sure relative positioning exists */
@@ -1374,11 +1373,11 @@ h3,
 /* --------------------------- */
 /* IMAGE skeleton (180px tall) */
 /* --------------------------- */
-.qomSingle.loading .qomImg::before {
+.qomticket.loading .qomImg::before {
   content: "";
   position: absolute;
   inset: 0;
-  height: 100%; /* exact image height you want */
+  height: 100%;
   background: #eee;
   animation: sk 1.4s infinite;
   border-radius: 5px;
@@ -1388,7 +1387,7 @@ h3,
 /* --------------------------- */
 /* TITLE skeleton              */
 /* --------------------------- */
-.qomSingle.loading h3::before {
+.qomticket.loading h3::before {
   content: "";
   position: absolute;
   right: 0;
@@ -1404,7 +1403,7 @@ h3,
 /* --------------------------- */
 /* PLACE skeleton              */
 /* --------------------------- */
-.qomSingle.loading .place::before {
+.qomticket.loading .place::before {
   content: "";
   position: absolute;
   right: 0;
@@ -1420,7 +1419,7 @@ h3,
 /* --------------------------- */
 /* BUTTON skeleton             */
 /* --------------------------- */
-.qomSingle.loading .buyBtn::before {
+.qomticket.loading .buyBtn::before {
   content: "";
   position: absolute;
   right: 0;
