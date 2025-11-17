@@ -1325,13 +1325,16 @@ ul.mr-auto li span {
   visibility: hidden;
 }
 
+.qomticket.flickity-enabled {
+  display: block;
+}
+
 .qomticket.loading .qomSingle {
   flex-shrink: 0;
 }
 
 .qomSingle {
   height: 100%;
-  transition: transform 0.1s;
 }
 
 @keyframes sk {
