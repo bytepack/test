@@ -1372,7 +1372,7 @@ h3,
 .qomSingle.loading h3::before {
   content: "";
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   width: 80%;
   height: 16px;
@@ -1388,7 +1388,7 @@ h3,
 .qomSingle.loading .place::before {
   content: "";
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   width: 60%;
   height: 14px;
@@ -1404,9 +1404,9 @@ h3,
 .qomSingle.loading .buyBtn::before {
   content: "";
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
-  width: 70%;
+  width: 100%;
   height: 34px;
   background: #eee;
   animation: sk 1.4s infinite;
