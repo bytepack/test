@@ -1320,6 +1320,18 @@ ul.mr-auto li span {
   height: 290px;
 }
 
+@media screen and (max-width: 992px) {
+  .qomticket {
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .qomticket {
+    height: 100;
+  }
+}
+
 .qomticket.loading {
   display: flex;
   visibility: hidden;
