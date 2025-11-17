@@ -1322,7 +1322,7 @@ ul.mr-auto li span {
   height: 290px;
 }
 
-.qomticket {
+.qomticket.loading {
   display: flex;
 }
 
