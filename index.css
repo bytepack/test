@@ -1332,6 +1332,7 @@ ul.mr-auto li span {
 
 .qomSingle {
   height: 100%;
+  flex-shrink: 1;
 }
 
 @keyframes sk {
@@ -1368,11 +1369,6 @@ h3,
   aspect-ratio: 3/2;
   object-fit: cover;
 }
-
-/* Hide all skeleton items after the first 3 */
-/* .qomticket.loading .qomSingle:nth-child(n + 4) {
-  display: none;
-} */
 
 /* --------------------------- */
 /* IMAGE skeleton (180px tall) */
