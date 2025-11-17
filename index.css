@@ -1340,7 +1340,7 @@ ul.mr-auto li span {
 
 /* hide real content but preserve layout */
 .qomSingle.loading * {
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 /* make sure relative positioning exists */
