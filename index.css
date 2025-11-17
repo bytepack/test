@@ -1324,3 +1324,83 @@ ul.mr-auto li span {
 .qomSingle {
   height: 100%;
 }
+
+/* -------------------- */
+/* Skeleton Animation   */
+/* -------------------- */
+@keyframes skeleton {
+  0% {
+    background-color: #eee;
+  }
+  50% {
+    background-color: #e5e5e5;
+  }
+  100% {
+    background-color: #eee;
+  }
+}
+
+/* Make sure layout stays the same */
+.qomSingle.loading * {
+  pointer-events: none;
+}
+
+/* Hide real content while loading */
+.qomSingle.loading img,
+.qomSingle.loading h3,
+.qomSingle.loading .place,
+.qomSingle.loading .buyBtn,
+.qomSingle.loading .off,
+.qomSingle.loading .new,
+.qomSingle.loading .maleFamale,
+.qomSingle.loading .favorite-box {
+  visibility: hidden;
+}
+
+/* -------------------- */
+/* Skeleton Elements    */
+/* -------------------- */
+
+/* Matches a real image area height */
+.qomSingle.loading .qomImg {
+  height: 180px; /* 🔥 fits perfectly inside 290px total */
+  background: #eee;
+  animation: skeleton 1.4s infinite;
+  border-radius: 5px;
+}
+
+/* Title skeleton */
+.qomSingle.loading h3::before {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 16px;
+  background: #eee;
+  animation: skeleton 1.4s infinite;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+/* Location skeleton */
+.qomSingle.loading .place::before {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 14px;
+  background: #eee;
+  animation: skeleton 1.4s infinite;
+  margin: 8px 0;
+  border-radius: 4px;
+}
+
+/* Buy button skeleton */
+.qomSingle.loading .buyBtn::before {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 34px;
+  background: #eee;
+  animation: skeleton 1.4s infinite;
+  border-radius: 6px;
+  margin-top: 10px;
+}
