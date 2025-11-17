@@ -1326,10 +1326,10 @@ ul.mr-auto li span {
   height: 100%;
 }
 
-/* -------------------- */
-/* Skeleton Animation   */
-/* -------------------- */
-@keyframes skeleton {
+/* ------------------------------------- */
+/* Skeleton Animation */
+/* ------------------------------------- */
+@keyframes sk {
   0% {
     background-color: #eee;
   }
@@ -1341,68 +1341,50 @@ ul.mr-auto li span {
   }
 }
 
-/* Make sure layout stays the same */
+/* ------------------------------------- */
+/* Turn the whole card into skeleton mode */
+/* ------------------------------------- */
+.qomSingle {
+  position: relative;
+}
+
+.qomSingle.loading {
+  /* hide real content but keep layout */
+}
 .qomSingle.loading * {
-  pointer-events: none;
+  opacity: 0; /* makes everything invisible WITHOUT shifting layout */
 }
 
-/* Hide real content while loading */
-.qomSingle.loading img,
-.qomSingle.loading h3,
-.qomSingle.loading .place,
-.qomSingle.loading .buyBtn,
-.qomSingle.loading .off,
-.qomSingle.loading .new,
-.qomSingle.loading .maleFamale,
-.qomSingle.loading .favorite-box {
-  visibility: hidden;
-}
+/* ------------------------------------- */
+/* Master skeleton overlay (fills entire card) */
+/* ------------------------------------- */
+.qomSingle.loading::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+        /* image skeleton */ linear-gradient(#eee 0 0) no-repeat,
+    /* title skeleton */ linear-gradient(#eee 0 0) no-repeat,
+    /* location skeleton */ linear-gradient(#eee 0 0) no-repeat,
+    /* button skeleton */ linear-gradient(#eee 0 0) no-repeat;
 
-/* -------------------- */
-/* Skeleton Elements    */
-/* -------------------- */
+  /* Perfect animation */
+  animation: sk 1.4s infinite;
 
-/* Matches a real image area height */
-.qomSingle.loading .qomImg {
-  height: 180px; /* 🔥 fits perfectly inside 290px total */
-  background: #eee;
-  animation: skeleton 1.4s infinite;
+  /* radius for whole card */
   border-radius: 5px;
 }
 
-/* Title skeleton */
-.qomSingle.loading h3 {
-  width: 80%;
-  height: 16px;
-  background: #eee;
-  animation: skeleton 1.4s infinite;
-  margin: 10px 0;
-  border-radius: 4px;
-  visibility: visible;
-}
+/* ------------------------------------- */
+/* Tell CSS EXACTLY where the skeleton blocks go */
+/* Matches your card design (290px tall) */
+/* ------------------------------------- */
 
-/* Location skeleton */
-.qomSingle.loading .place::before {
-  content: "";
-  display: block;
-  width: 60%;
-  height: 14px;
-  background: #eee;
-  animation: skeleton 1.4s infinite;
-  margin: 8px 0;
-  border-radius: 4px;
-  visibility: visible;
-}
+.qomSingle.loading::before {
+  /* Image skeleton block */
+  background-size: 100% 180px, /* qomImg */ 80% 16px, /* title */ 60% 14px,
+    /* place */ 70% 34px; /* button */
 
-/* Buy button skeleton */
-.qomSingle.loading .buyBtn::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 34px;
-  background: #eee;
-  animation: skeleton 1.4s infinite;
-  border-radius: 6px;
-  margin-top: 10px;
-  visibility: visible;
+  background-position: 0 0, /* image top */ 0 195px,
+    /* title below image */ 0 225px, /* place */ 0 calc(100% - 40px); /* button */
 }
