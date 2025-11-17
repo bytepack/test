@@ -1327,6 +1327,10 @@ ul.mr-auto li span {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.qomticket.loading .qomSingle {
+  width: 100%;
+}
+
 .qomSingle {
   height: 100%;
 }
