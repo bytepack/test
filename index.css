@@ -1326,63 +1326,86 @@ ul.mr-auto li span {
   height: 100%;
 }
 
-/* ------------------------------------- */
-/* Skeleton Animation */
-/* ------------------------------------- */
 @keyframes sk {
   0% {
-    background-color: #fff;
-  }
-  50% {
     background-color: #eee;
   }
+  50% {
+    background-color: #e5e5e5;
+  }
   100% {
-    background-color: #fff;
+    background-color: #eee;
   }
 }
 
-/* ------------------------------------- */
-/* Turn the whole card into skeleton mode */
-/* ------------------------------------- */
-.qomSingle {
+/* hide real content but preserve layout */
+.qomSingle.loading * {
+  opacity: 0;
+}
+
+/* make sure relative positioning exists */
+.qomSingle,
+.qomImg,
+h3,
+.place,
+.buyBtn {
   position: relative;
 }
 
-.qomSingle.loading * {
-  opacity: 0; /* makes everything invisible WITHOUT shifting layout */
-}
-
-/* ------------------------------------- */
-/* Master skeleton overlay (fills entire card) */
-/* ------------------------------------- */
-.qomSingle.loading::before {
+/* --------------------------- */
+/* IMAGE skeleton (180px tall) */
+/* --------------------------- */
+.qomSingle.loading .qomImg::before {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-        /* image skeleton */ linear-gradient(#eee 0 0) no-repeat,
-    /* title skeleton */ linear-gradient(#eee 0 0) no-repeat,
-    /* location skeleton */ linear-gradient(#eee 0 0) no-repeat,
-    /* button skeleton */ linear-gradient(#eee 0 0) no-repeat;
-
-  /* Perfect animation */
+  height: 180px; /* exact image height you want */
+  background: #eee;
   animation: sk 1.4s infinite;
-
-  /* radius for whole card */
   border-radius: 5px;
 }
 
-/* ------------------------------------- */
-/* Tell CSS EXACTLY where the skeleton blocks go */
-/* Matches your card design (290px tall) */
-/* ------------------------------------- */
+/* --------------------------- */
+/* TITLE skeleton              */
+/* --------------------------- */
+.qomSingle.loading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80%;
+  height: 16px;
+  background: #eee;
+  animation: sk 1.4s infinite;
+  border-radius: 4px;
+}
 
-.qomSingle.loading::before {
-  /* Image skeleton block */
-  background-size: 100% 180px, /* qomImg */ 80% 16px, /* title */ 60% 14px,
-    /* place */ 70% 34px; /* button */
+/* --------------------------- */
+/* PLACE skeleton              */
+/* --------------------------- */
+.qomSingle.loading .place::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60%;
+  height: 14px;
+  background: #eee;
+  animation: sk 1.4s infinite;
+  border-radius: 4px;
+}
 
-  background-position: 0 0, /* image top */ 0 195px,
-    /* title below image */ 0 225px, /* place */ 0 calc(100% - 40px); /* button */
-  visibility: visible;
+/* --------------------------- */
+/* BUTTON skeleton             */
+/* --------------------------- */
+.qomSingle.loading .buyBtn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 70%;
+  height: 34px;
+  background: #eee;
+  animation: sk 1.4s infinite;
+  border-radius: 6px;
 }
