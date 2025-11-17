@@ -1359,7 +1359,7 @@ h3,
   content: "";
   position: absolute;
   inset: 0;
-  height: 180px; /* exact image height you want */
+  height: 100%; /* exact image height you want */
   background: #eee;
   animation: sk 1.4s infinite;
   border-radius: 5px;
