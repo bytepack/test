@@ -1371,9 +1371,7 @@ ul.mr-auto li span {
 }
 
 /* Title skeleton */
-.qomSingle.loading h3::before {
-  content: "";
-  display: block;
+.qomSingle.loading h3 {
   width: 80%;
   height: 16px;
   background: #eee;
@@ -1400,7 +1398,7 @@ ul.mr-auto li span {
 .qomSingle.loading .buyBtn::before {
   content: "";
   display: block;
-  width: 70%;
+  width: 100%;
   height: 34px;
   background: #eee;
   animation: skeleton 1.4s infinite;
