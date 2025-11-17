@@ -1327,7 +1327,6 @@ ul.mr-auto li span {
 
 .qomticket.loading .qomSingle {
   flex-shrink: 0;
-  opacity: 0;
 }
 
 .qomSingle {
