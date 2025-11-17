@@ -1324,6 +1324,7 @@ ul.mr-auto li span {
 
 .qomticket.loading {
   display: flex;
+  visibility: hidden;
 }
 
 .qomticket.loading .qomSingle {
