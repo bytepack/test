@@ -1316,3 +1316,11 @@ ul.mr-auto li span {
   width: 40%;
   height: 40%;
 }
+
+.qomticket {
+  height: 290px;
+}
+
+.qomSingle {
+  height: 100%;
+}
