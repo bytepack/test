@@ -1327,12 +1327,11 @@ ul.mr-auto li span {
 
 .qomticket.loading .qomSingle {
   flex-shrink: 0;
+  opacity: 0;
 }
 
 .qomSingle {
   height: 100%;
-  transition: none;
-  transition: transform 0.1s;
 }
 
 @keyframes sk {
@@ -1425,7 +1424,7 @@ h3,
   right: 0;
   top: 0;
   width: 100%;
-  height: 90%;
+  height: 80%;
   background: #eee;
   animation: sk 1.4s infinite;
   border-radius: 6px;
