@@ -1331,13 +1331,13 @@ ul.mr-auto li span {
 /* ------------------------------------- */
 @keyframes sk {
   0% {
-    background-color: #eee;
-  }
-  50% {
     background-color: #fff;
   }
-  100% {
+  50% {
     background-color: #eee;
+  }
+  100% {
+    background-color: #fff;
   }
 }
 
