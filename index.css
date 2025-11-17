@@ -1323,12 +1323,11 @@ ul.mr-auto li span {
 }
 
 .qomticket.loading {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
 }
 
 .qomticket.loading .qomSingle {
-  width: 100%;
+  flex-shrink: 0;
 }
 
 .qomSingle {
