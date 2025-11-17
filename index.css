@@ -1370,9 +1370,9 @@ h3,
 }
 
 /* Hide all skeleton items after the first 3 */
-.qomticket.loading .qomSingle:nth-child(n + 4) {
+/* .qomticket.loading .qomSingle:nth-child(n + 4) {
   display: none;
-}
+} */
 
 /* --------------------------- */
 /* IMAGE skeleton (180px tall) */
