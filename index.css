@@ -1321,7 +1321,7 @@ ul.mr-auto li span {
 }
 
 .qomticket.loading {
-  /* display: flex; */
+  display: flex;
   visibility: hidden;
 }
 
