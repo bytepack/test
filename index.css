@@ -1363,6 +1363,7 @@ h3,
   background: #eee;
   animation: sk 1.4s infinite;
   border-radius: 5px;
+  visibility: visible;
 }
 
 /* --------------------------- */
@@ -1378,6 +1379,7 @@ h3,
   background: #eee;
   animation: sk 1.4s infinite;
   border-radius: 4px;
+  visibility: visible;
 }
 
 /* --------------------------- */
@@ -1393,6 +1395,7 @@ h3,
   background: #eee;
   animation: sk 1.4s infinite;
   border-radius: 4px;
+  visibility: visible;
 }
 
 /* --------------------------- */
@@ -1408,4 +1411,5 @@ h3,
   background: #eee;
   animation: sk 1.4s infinite;
   border-radius: 6px;
+  visibility: visible;
 }
