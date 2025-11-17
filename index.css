@@ -1387,4 +1387,5 @@ ul.mr-auto li span {
 
   background-position: 0 0, /* image top */ 0 195px,
     /* title below image */ 0 225px, /* place */ 0 calc(100% - 40px); /* button */
+  visibility: visible;
 }
