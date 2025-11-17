@@ -1326,9 +1326,12 @@ ul.mr-auto li span {
   display: flex;
 }
 
+.qomticket.loading .qomSingle {
+  flex-shrink: 0;
+}
+
 .qomSingle {
   height: 100%;
-  flex-shrink: 0;
 }
 
 @keyframes sk {
@@ -1369,7 +1372,7 @@ h3,
 /* --------------------------- */
 /* IMAGE skeleton (180px tall) */
 /* --------------------------- */
-.qomSingle.loading .qomImg::before {
+.qomticket.loading .qomImg::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -1383,7 +1386,7 @@ h3,
 /* --------------------------- */
 /* TITLE skeleton              */
 /* --------------------------- */
-.qomSingle.loading h3::before {
+.qomticket.loading h3::before {
   content: "";
   position: absolute;
   right: 0;
@@ -1399,7 +1402,7 @@ h3,
 /* --------------------------- */
 /* PLACE skeleton              */
 /* --------------------------- */
-.qomSingle.loading .place::before {
+.qomticket.loading .place::before {
   content: "";
   position: absolute;
   right: 0;
@@ -1415,7 +1418,7 @@ h3,
 /* --------------------------- */
 /* BUTTON skeleton             */
 /* --------------------------- */
-.qomSingle.loading .buyBtn::before {
+.qomticket.loading .buyBtn::before {
   content: "";
   position: absolute;
   right: 0;
