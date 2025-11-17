@@ -1352,6 +1352,10 @@ h3,
   position: relative;
 }
 
+.qomticket .qomImg {
+  height: 200px;
+}
+
 /* --------------------------- */
 /* IMAGE skeleton (180px tall) */
 /* --------------------------- */
